@@ -27,7 +27,7 @@ brew "antigen"
 # Note: This replaces some (outdated) built-in macOS utilities with the GNU equivalents
 # Don't forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew "coreutils"
-brew "curl-openssl"
+brew "curl"
 #brew "findutils" # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
 brew "git"
 brew "git-lfs"
@@ -97,8 +97,6 @@ cask "steam"
 # seek only tools
 brew "seek_auth"
 brew "seek_bastion"
-brew "seek_gantry"
-brew "snyk"
 
 # Other useful tools
 brew "highlight" # https://developer.atlassian.com/blog/2015/08/beautiful-presentations-with-highlight/
@@ -164,7 +162,7 @@ cask "gotomeeting"
 cask "jd-gui"
 cask "obs"
 cask "textexpander"
-cask "tunnelblick"
+cask "openvpn-connect"
 cask "unetbootin"
 cask "visual-studio-code"
 cask "wireshark"
