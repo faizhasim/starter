@@ -124,7 +124,7 @@ brew "wifi-password"
 # Installing Python/Ruby with Homebrew is unnecessary,
 # as they will be installed and managed via pyenv/rbenv respectively
 brew "go"
-brew "python"
+brew "pyenv"
 brew "ruby-build"
 brew "rbenv" # Ruby
 brew "n"

@@ -1,3 +1,4 @@
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 export TERM="xterm-256color"
 source $(brew --prefix)/share/antigen/antigen.zsh
 
@@ -5,8 +6,6 @@ antigen use oh-my-zsh
 
 setup_plugins() {
     antigen bundle git
-    antigen bundle git-flow
-    antigen bundle aws
     antigen bundle marked2
     antigen bundle mgryszko/jvm
     antigen bundle psprint/zsh-navigation-tools
@@ -15,28 +14,14 @@ setup_plugins() {
     antigen bundle osx
     antigen bundle Tarrasch/zsh-colors
     antigen bundle KyleChamberlin/zsh_maven_plugin
-    antigen bundle brew
-    antigen bundle go
+    antigen bundle docker
+    antigen bundle golang
     antigen bundle gradle
-    antigen bundle heroku
-    antigen bundle lein
-    antigen bundle mvn
-    antigen bundle postgres
-    antigen bundle sbt
-    antigen bundle scala
     antigen bundle node
     antigen bundle npm
     antigen bundle nvm
-    antigen bundle gem
-    antigen bundle bundler
-    antigen bundle rbenv
-    antigen bundle gem
-    antigen bundle bundler
-    antigen bundle pip
-    antigen bundle python
     antigen bundle brew
     antigen bundle brew cask
-    antigen bundle rancher-zsh-completion
 }
 
 setup_theme() {
@@ -58,16 +43,10 @@ setup_theme() {
     antigen theme bhilburn/powerlevel9k powerlevel9k
 }
 
-setup_plugins && setup_theme && antigen apply
+setup_plugins && antigen apply
 
-export GOPATH=$HOME/dev/go-workspace
-export PATH=/usr/local/bin:$GOPATH/bin:$PATH
-export MAVEN_OPTS="-Xmx2048m -XX:+CMSClassUnloadingEnabled -XX:+UseCompressedOops"
-export LEARNDOT_CONFIG="/Users/faizhasim/dev/stash/unicorn-scala/config/development.yml"
-export JAVA_HOME=$(/usr/libexec/java_home)
 
-export NVM_DIR="/Users/faizhasim/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH=/usr/local/bin:$PATH
 
 # added by travis gem
 [ -f /Users/faizhasim/.travis/travis.sh ] && source /Users/faizhasim/.travis/travis.sh
@@ -84,4 +63,40 @@ export LC_ALL="en_US.UTF-8"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+export GOPATH="${HOME}/dev/go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
+test -d "${GOPATH}" || mkdir "${GOPATH}"
+test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+
 export PATH="/usr/local/sbin:/usr/local/mysql/bin:$HOME/.yarn/bin:$PATH"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/faizhasim/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/faizhasim/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/faizhasim/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/faizhasim/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
+
+eval "$(direnv hook zsh)"
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/faizhasim/.config/yarn/global/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/faizhasim/.config/yarn/global/node_modules/tabtab/.completions/slss.zshexport
+
+
+# #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# export SDKMAN_DIR="/Users/faizhasim/.sdkman"
+# [[ -s "/Users/faizhasim/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/faizhasim/.sdkman/bin/sdkman-init.sh"
+
+eval "$(starship init zsh)"
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export SSH_AUTH_SOCK=$HOME/.sekey/ssh-agent.ssh
+export HOMEBREW_GITHUB_API_TOKEN="xxxx"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
+
