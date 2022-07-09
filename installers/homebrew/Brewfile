@@ -92,12 +92,8 @@ cask "kindle"
 cask "dozer" # Tool to hide status bar icons
 
 # games
-cask "epic-games"
-cask "steam"
-
-# seek only tools
-brew "seek_auth"
-brew "seek_bastion"
+# cask "epic-games"
+# cask "steam"
 
 # Other useful tools
 brew "highlight" # https://developer.atlassian.com/blog/2015/08/beautiful-presentations-with-highlight/
@@ -189,8 +185,8 @@ cask "microsoft-edge"
 # cask "ios-saver"
 
 # Drivers
-cask "fujitsu-scansnap-manager"
-cask "synologyassistant"
+# cask "fujitsu-scansnap-manager"
+# cask "synologyassistant"
 cask "logitech-options"
 
 # Services
@@ -247,8 +243,8 @@ mas "Fantastical", id: 975937182
 mas "Final Cut Pro", id: 424389933
 mas "Gifski", id: 1351639930
 mas "GIPHY CAPTURE", id: 668208984
-mas "iMovie", id: 408981434
-mas "Jira", id: 1475897096
+# mas "iMovie", id: 408981434
+# mas "Jira", id: 1475897096
 mas "Magnet", id: 441258766
 mas "Marked 2", id: 890031187
 mas "Microsoft Excel", id: 462058435
@@ -266,7 +262,6 @@ mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
 mas "Trello", id: 1278508951
 mas "Twitter", id: 1482454543
-mas "Xcode", id: 497799835
 
 # Apple MAS applications
 mas "Keynote", id: 409183694
