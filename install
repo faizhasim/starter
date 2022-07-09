@@ -4,11 +4,11 @@
 sudo -v
 
 # Ask for HOMEBREW_GITHUB_API_TOKEN for private homebrew cask
-if [[ -z "$HOMEBREW_GITHUB_API_TOKEN" ]]; then
-  echo "Please enter HOMEBREW_GITHUB_API_TOKEN for brew tap private cask: "
-  read -r HOMEBREW_GITHUB_API_TOKEN
-  export HOMEBREW_GITHUB_API_TOKEN
-fi
+#if [[ -z "$HOMEBREW_GITHUB_API_TOKEN" ]]; then
+#  echo "Please enter HOMEBREW_GITHUB_API_TOKEN for brew tap private cask: "
+#  read -r HOMEBREW_GITHUB_API_TOKEN
+#  export HOMEBREW_GITHUB_API_TOKEN
+#fi
 
 # Keep-alive: update existing `sudo` time stamp until script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
