@@ -7,8 +7,8 @@
 # Install Homebrew if not installed - brew.sh
 if ! hash brew 2>/dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+#  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+#  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Schedule Homebrew Updates
