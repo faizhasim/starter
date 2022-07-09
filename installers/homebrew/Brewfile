@@ -55,6 +55,8 @@ brew "starship"
 brew "telnet"
 brew "tldr"
 brew "watch"
+brew "kubectl"
+brew "helm"
 
 # infra as code / cloud / db tools
 brew "awscli"
