@@ -123,8 +123,8 @@ brew "wifi-password"
 # as they will be installed and managed via pyenv/rbenv respectively
 brew "go"
 brew "pyenv"
-brew "ruby-build"
-brew "rbenv" # Ruby
+brew "chruby"
+brew "ruby-install"
 brew "n"
 brew "yarn" # Faster than npm
 brew "jq"
