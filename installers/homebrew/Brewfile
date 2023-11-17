@@ -10,6 +10,7 @@ tap "homebrew/bundle"
 tap "homebrew/core"
 tap "acrogenesis/macchanger"
 tap "snyk/tap"
+tap "ankitpokhrel/jira-cli"
 
 # Cask dependencies
 brew "mas"
@@ -56,6 +57,7 @@ brew "tldr"
 brew "watch"
 brew "kubectl"
 brew "helm"
+brew "shfmt"
 
 # infra as code / cloud / db tools
 brew "awscli"
@@ -82,6 +84,7 @@ cask "signal"
 # critical utils
 cask "1password"
 cask "1password-cli"
+brew "jira-cli"
 
 # general utility apps
 cask "piezo"
@@ -122,10 +125,7 @@ brew "wifi-password"
 # Installing Python/Ruby with Homebrew is unnecessary,
 # as they will be installed and managed via pyenv/rbenv respectively
 brew "go"
-brew "pyenv"
-brew "chruby"
-brew "ruby-install"
-brew "n"
+brew "asdf"
 brew "yarn" # Faster than npm
 brew "jq"
 brew "yq"
