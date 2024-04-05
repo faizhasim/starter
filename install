@@ -27,6 +27,7 @@ INSTALLERS=(
   google-fonts
   mackup
 #  safari-extensions
+  krew
 )
 
 # Sources all the preference files
