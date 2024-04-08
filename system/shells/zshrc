@@ -22,6 +22,7 @@ setup_plugins() {
     antigen bundle nvm
     antigen bundle brew
     antigen bundle brew cask
+    antigen bundle dbz/kube-aliases
 }
 
 setup_theme() {

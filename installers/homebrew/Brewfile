@@ -59,6 +59,7 @@ brew "kubectl"
 brew "krew"
 brew "argocd"
 brew "helm"
+brew "minikube"
 brew "shfmt"
 
 # infra as code / cloud / db tools
